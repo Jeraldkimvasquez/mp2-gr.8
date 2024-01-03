@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="shop.css">
+    <title>Your E-Commerce Store</title>
+</head>
+<body>
+    <header>
+        <h1>Gizmo Revolution</h1>
+    </header>
+
+    <div class="container">
+        <div class="product-list">
+            <!-- Product 1 -->
+            <div class="product">
+                <img src="iphone10.jpg" alt="Product Iphone 10">
+                <div class="product-details">
+                    <h2>Product Iphone 10</h2>
+                    <p>Description: The latest and greatest iPhone!</p>
+                    <p>Price: $19.99</p>
+                    <div class="quantity-buttons">
+                        <button onclick="decrementQuantity('iphone10')">-</button>
+                        <span id="quantity-iphone10">0</span>
+                        <button onclick="incrementQuantity('iphone10')">+</button>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart(19.99, 'iphone10', 'Iphone 10', this)">Add to Cart</button>
+
+                </div>
+            </div>
+
+            <!-- Repeat the product block for additional products -->
+
+            <!-- Product 2 -->
+            <div class="product">
+                <img src="samsungGalaxy.jpg" alt="Product Samsung Galaxy">
+                <div class="product-details">
+                    <h2>Product Samsung Galaxy</h2>
+                    <p>Description: A powerful Android phone.</p>
+                    <p>Price: $29.99</p>
+                    <div class="quantity-buttons">
+                        <button onclick="decrementQuantity('samsungGalaxy')">-</button>
+                        <span id="quantity-samsungGalaxy">0</span>
+                        <button onclick="incrementQuantity('samsungGalaxy')">+</button>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart(29.99, 'samsungGalaxy', 'Samsung Galaxy', this)">Add to Cart</button>
+                </div>
+            </div>
+           
+        </div>
+       
+            
+        <div class="cart-content">
+            <h2>Shopping Cart</h2>
+            <ul id="cart-items">
+                <!-- Cart items will be displayed here -->
+            </ul>
+            <div class="cart-total" id="cart-total">Total: $0.00</div>
+        </div>
+        
+
+
+        
+    </div>
+
+    <script src="shop.js"></script>
+</body>
+</html>
