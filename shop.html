@@ -1,83 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Existing head content -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="shop.css">
-    <title>Your E-Commerce Store</title>
+  
+    <title>POS SYSTEM</title>
 </head>
 <body>
     <header>
-        <h1>Gizmo Revolution</h1>
+        <h1>Restaurant POS SYSTEM</h1>
     </header>
 
+    <!-- Add Bootstrap nav with tabs -->
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" id="foods-tab" data-toggle="tab" href="#foods">Foods</a>
+        </li>
+        <!-- Add more tabs as needed -->
+        <li class="nav-item">
+            <a class="nav-link" id="snacks-tab" data-toggle="tab" href="#snacks">Snacks</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="drinks-tab" data-toggle="tab" href="#drinks">Drinks</a>
+        </li>
+    </ul>
+
     <div class="container">
-        <div class="product-list">
-            <!-- Product 1 -->
-            <div class="product">
-                <img src="iphone10.jpg" alt="Product Iphone 10">
-                <div class="product-details">
-                    <h2>Product Iphone 10</h2>
-                    <p>Description: The latest and greatest iPhone!</p>
-                    <p>Price: $19.99</p>
-                    <div class="quantity-buttons">
-                        <button onclick="decrementQuantity('iphone10')">-</button>
-                        <span id="quantity-iphone10">0</span>
-                        <button onclick="incrementQuantity('iphone10')">+</button>
+        <div class="row">
+            <!-- Add Bootstrap tab content -->
+            <div class="col-md-9">
+                <div class="tab-content">
+                    <div id="foods" class="tab-pane fade show active">
+                        <!-- Products related to Foods category -->
+                        <div class="product-list">
+                            <!-- Product 1 -->
+                            <div class="product">
+                                <img src="Balbacua.jpg" alt="balbacua">
+                                <div class="product-details">
+                                    <h2>Balbacua</h2>
+                                    <p>Description: The latest and greatest iPhone!</p>
+                                    <p>Price: $19.99</p>
+                                    <div class="quantity-buttons">
+                                        <button onclick="decrementQuantity('iphone10')">-</button>
+                                        <span id="quantity-iphone10">0</span>
+                                        <button onclick="incrementQuantity('iphone10')">+</button>
+                                    </div>
+                                    <button class="add-to-cart" onclick="addToCart(19.99, 'iphone10', 'iphone 10', this)">Order</button>
+                                </div>
+                            </div>
+                            <!-- Product 2 -->
+                            <div class="product">
+                                <img src="Beef Bulalo.jpg" alt="Beef Bulalo">
+                                <div class="product-details">
+                                    <h2>Product Iphone 10</h2>
+                                    <p>Description: The latest and greatest iPhone!</p>
+                                    <p>Price: $19.99</p>
+                                    <div class="quantity-buttons">
+                                        <button onclick="decrementQuantity('iphone10')">-</button>
+                                        <span id="quantity-iphone10">0</span>
+                                        <button onclick="incrementQuantity('iphone10')">+</button>
+                                    </div>
+                                    <button class="add-to-cart" onclick="addToCart(19.99, 'iphone10', 'iphone 10', this)">Add to Cart</button>
+                                </div>
+                            </div>
+                             <!-- Product 3 -->
+                             <div class="product">
+                                <img src="iphone10.jpg" alt="Product Iphone 10">
+                                <div class="product-details">
+                                    <h2>Product Iphone 10</h2>
+                                    <p>Description: The latest and greatest iPhone!</p>
+                                    <p>Price: $19.99</p>
+                                    <div class="quantity-buttons">
+                                        <button onclick="decrementQuantity('iphone10')">-</button>
+                                        <span id="quantity-iphone10">0</span>
+                                        <button onclick="incrementQuantity('iphone10')">+</button>
+                                    </div>
+                                    <button class="add-to-cart" onclick="addToCart(19.99, 'iphone10', 'iphone 10', this)">Add to Cart</button>
+                                </div>
+                            </div>
+                             <!-- Product 4-->
+                             <div class="product">
+                                <img src="iphone10.jpg" alt="Product Iphone 10">
+                                <div class="product-details">
+                                    <h2>Product Iphone 10</h2>
+                                    <p>Description: The latest and greatest iPhone!</p>
+                                    <p>Price: $19.99</p>
+                                    <div class="quantity-buttons">
+                                        <button onclick="decrementQuantity('iphone10')">-</button>
+                                        <span id="quantity-iphone10">0</span>
+                                        <button onclick="incrementQuantity('iphone10')">+</button>
+                                    </div>
+                                    <button class="add-to-cart" onclick="addToCart(19.99, 'iphone10', 'iphone 10', this)">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <button class="add-to-cart" onclick="addToCart(19.99, 'iphone10', 'Iphone 10', this)">Add to Cart</button>
-
+                    <!-- Add more tab panes as needed -->
+                    <!-- Snacks Tab Pane -->
+            <div class="tab-pane fade" id="snacks">
+                <div class="product-list">
+                   
+                      <!-- Product 4-->
+                      <div class="product">
+                        <img src="iphone10.jpg" alt="Product Iphone 10">
+                        <div class="product-details">
+                            <h2>Product Iphone 10</h2>
+                            <p>Description: The latest and greatest iPhone!</p>
+                            <p>Price: $19.99</p>
+                            <div class="quantity-buttons">
+                                <button onclick="decrementQuantity('iphone10')">-</button>
+                                <span id="quantity-iphone10">0</span>
+                                <button onclick="incrementQuantity('iphone10')">+</button>
+                            </div>
+                            <button class="add-to-cart" onclick="addToCart(19.99, 'iphone10', 'iphone 10', this)">Add to Cart</button>
+                        </div>
+                    </div>
+                     <!-- Product 5-->
+                     <div class="product">
+                        <img src="iphone10.jpg" alt="Product Iphone 10">
+                        <div class="product-details">
+                            <h2>Product Iphone 10</h2>
+                            <p>Description: The latest and greatest iPhone!</p>
+                            <p>Price: $19.99</p>
+                            <div class="quantity-buttons">
+                                <button onclick="decrementQuantity('iphone10')">-</button>
+                                <span id="quantity-iphone10">0</span>
+                                <button onclick="incrementQuantity('iphone10')">+</button>
+                            </div>
+                            <button class="add-to-cart" onclick="addToCart(19.99, 'iphone10', 'iphone 10', this)">Add to Cart</button>
+                        </div>
+                    </div>
+                       <!-- Product 6-->
+                       <div class="product">
+                        <img src="iphone10.jpg" alt="Product Iphone 10">
+                        <div class="product-details">
+                            <h2>Product Iphone 10</h2>
+                            <p>Description: The latest and greatest iPhone!</p>
+                            <p>Price: $19.99</p>
+                            <div class="quantity-buttons">
+                                <button onclick="decrementQuantity('iphone10')">-</button>
+                                <span id="quantity-iphone10">0</span>
+                                <button onclick="incrementQuantity('iphone10')">+</button>
+                            </div>
+                            <button class="add-to-cart" onclick="addToCart(19.99, 'iphone10', 'iphone 10', this)">Add to Cart</button>
+                        </div>
+                    </div>
+                     <!-- Product 7-->
+                     <div class="product">
+                        <img src="iphone10.jpg" alt="Product Iphone 10">
+                        <div class="product-details">
+                            <h2>Product Iphone 10</h2>
+                            <p>Description: The latest and greatest iPhone!</p>
+                            <p>Price: $19.99</p>
+                            <div class="quantity-buttons">
+                                <button onclick="decrementQuantity('iphone10')">-</button>
+                                <span id="quantity-iphone10">0</span>
+                                <button onclick="incrementQuantity('iphone10')">+</button>
+                            </div>
+                            <button class="add-to-cart" onclick="addToCart(19.99, 'iphone10', 'iphone 10', this)">Add to Cart</button>
+                        </div>
+                    </div>
+                    <!-- Product 8-->
+                </div>
+            </div>
+             <!-- Drinks Tab Pane -->
+             <div class="tab-pane fade" id="drinks">
+                <div class="product-list">
+                     <!-- Product 7-->
+                     <div class="product">
+                        <img src="iphone10.jpg" alt="Product Iphone 10">
+                        <div class="product-details">
+                            <h2>Product Iphone 10</h2>
+                            <p>Description: The latest and greatest iPhone!</p>
+                            <p>Price: $19.99</p>
+                            <div class="quantity-buttons">
+                                <button onclick="decrementQuantity('iphone10')">-</button>
+                                <span id="quantity-iphone10">0</span>
+                                <button onclick="incrementQuantity('iphone10')">+</button>
+                            </div>
+                            <button class="add-to-cart" onclick="addToCart(19.99, 'iphone10', 'iphone 10', this)">Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Repeat the product block for additional products -->
-
-            <!-- Product 2 -->
-            <div class="product">
-                <img src="samsungGalaxy.jpg" alt="Product Samsung Galaxy">
-                <div class="product-details">
-                    <h2>Product Samsung Galaxy</h2>
-                    <p>Description: A powerful Android phone.</p>
-                    <p>Price: $29.99</p>
-                    <div class="quantity-buttons">
-                        <button onclick="decrementQuantity('samsungGalaxy')">-</button>
-                        <span id="quantity-samsungGalaxy">0</span>
-                        <button onclick="incrementQuantity('samsungGalaxy')">+</button>
-                    </div>
-                    <button class="add-to-cart" onclick="addToCart(29.99, 'samsungGalaxy', 'Samsung Galaxy', this)">Add to Cart</button>
                 </div>
             </div>
-            <!-- Product 3 -->
-            <div class="product">
-                <img src="samsungGalaxy.jpg" alt="Product Samsung Galaxy">
-                <div class="product-details">
-                    <h2>Product Samsung Galaxy</h2>
-                    <p>Description: A powerful Android phone.</p>
-                    <p>Price: $29.99</p>
-                    <div class="quantity-buttons">
-                        <button onclick="decrementQuantity('samsungGalaxy')">-</button>
-                        <span id="quantity-samsungGalaxy">0</span>
-                        <button onclick="incrementQuantity('samsungGalaxy')">+</button>
-                    </div>
-                    <button class="add-to-cart" onclick="addToCart(29.99, 'samsungGalaxy', 'Samsung Galaxy', this)">Add to Cart</button>
-                </div>
-            </div>
-        </div>
-       
             
-        <div class="cart-content">
-            <h2>Shopping Cart</h2>
-            <ul id="cart-items">
-                <!-- Cart items will be displayed here -->
-            </ul>
-            <div class="cart-total" id="cart-total">Total: $0.00</div>
+            <!-- Fixed Cart Sidebar -->
+            <div class="col-md-3 fixed-cart">
+                <div class="cart-content">
+                    <h2>Shopping Cart</h2>
+                    <ul id="cart-items">
+                        <!-- Cart items will be displayed here -->
+                    </ul>
+                    <div class="cart-total" id="cart-total">Total: $0.00</div>
+
+                    <!-- Add a payment input field -->
+                    <label for="payment">Payment: $</label>
+                    <input type="number" id="payment" min="0" step="0.01">
+                    <button onclick="processPayment()">Process Payment</button>
+                    <!-- Add this div for displaying payment status -->
+                    <div id="payment-status"></div>
+                    <div id="change-notification"></div>
+                </div>
+            </div>
         </div>
-        
-
-
-        
     </div>
 
+    <!-- Add Bootstrap JS and Popper.js scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+
+    <!-- Include your existing JavaScript file -->
     <script src="shop.js"></script>
 </body>
 </html>

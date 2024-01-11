@@ -121,3 +121,55 @@ function getImageUrl(productId) {
     // For example, assuming the images are in the same directory with the HTML file and have the same filename as the productId with a .jpg extension:
     return `${productId}.jpg`;
 }
+
+function processPayment() {
+    const paymentInput = document.getElementById('payment');
+    const paymentAmount = parseFloat(paymentInput.value);
+
+    if (isNaN(paymentAmount) || paymentAmount < 0) {
+        alert("Please enter a valid payment amount.");
+        return;
+    }
+
+    const paymentStatus = document.getElementById('payment-status');
+    const changeNotification = document.getElementById('change-notification');
+
+    if (paymentAmount >= cartTotal) {
+        const change = paymentAmount - cartTotal;
+        paymentStatus.textContent = "Payment successful!";
+        changeNotification.textContent = `Your change: $${change.toFixed(2)}`;
+        resetCart();
+    } else {
+        paymentStatus.textContent = "Insufficient payment. Please enter a higher amount.";
+        changeNotification.textContent = "";
+    }
+}
+
+
+
+
+function resetCart() {
+    cartTotal = 0;
+    cart = [];
+    displayCart();
+    document.getElementById('payment').value = ''; // Clear the payment input
+}
+// Add this function to your existing JavaScript
+function showCategory(category) {
+    // Implement logic to filter and display products based on the selected category
+    // For example, you can hide/show products based on their category
+}
+
+function displayCart() {
+    const cartItemsElement = document.getElementById('cart-items');
+    const cartTotalElement = document.getElementById('cart-total');
+
+    cartItemsElement.innerHTML = cart
+        .map(item => `<li><img src="${getImageUrl(item.id)}" alt="${item.name}" width="50" height="50"> ${getQuantity(item.id)} x ${item.name} - $${(item.price * getQuantity(item.id)).toFixed(2)} <button class="remove-button" onclick="removeItem('${item.id}')">Remove</button></li>`)
+        .join('');
+
+    cartTotal = cart.reduce((total, item) => total + item.price * getQuantity(item.id), 0);
+    cartTotalElement.textContent = `Total: $${cartTotal.toFixed(2)}`;
+}
+
+
